@@ -31,7 +31,7 @@ public class SecondOrderPage {
     //Кнопка "Да"
     private final By yesButtonLocator = By.xpath(".//button[text() = 'Да']");
     //Окно "Заказ оформлен"
-    private final By checkStatusButton = By.xpath(".//button[text()='Посмотреть статус");
+    private final By checkStatusView = By.xpath(".//div[@class='Order_Modal__YZ-d3']");
 
     public SecondOrderPage(WebDriver driver) {
         this.driver = driver;
@@ -83,8 +83,8 @@ public class SecondOrderPage {
     }
     //Ожидание открытия окна с подтверждением создания заказа
     public void checkForLoadOrderView() {
-        WebElement statusButton = driver.findElement(checkStatusButton);
-        new WebDriverWait(driver, 3).until(ExpectedConditions.presenceOfElementLocated(checkStatusButton));
+        WebElement statusButton = driver.findElement(checkStatusView);
+        new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(checkStatusView));
         statusButton.isDisplayed();
     }
     //Метод для заполнения первого теста

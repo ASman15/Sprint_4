@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import PageObject.FirstOrderPage;
 import PageObject.MainPage;
 import PageObject.SecondOrderPage;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 
 public class NewOrderTest {
